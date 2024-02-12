@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { CarouselComponent } from './shared/carousel/carousel.component'
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProjectCardComponent } from './projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     ProjectsComponent,
     HeaderComponent,
     SearchBarComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
