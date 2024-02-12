@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="container mt-2">
+    <!-- Search bar -->
+    <div class="row mb-2">
+        <app-search-bar></app-search-bar>
+    </div>
+    <!-- Carousel -->
+    <div class="row mb-3">
+        <app-carousel></app-carousel>
+    </div>
+    <!-- Category Selection -->
+    <div class="mb-3" ngbAccordion>
+        <div ngbAccordionItem>
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton>Categories</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+              <ng-template>
+                <div class="d-flex flex-row flex-wrap gap-2">
+                    <div class="px-2 py-1 rounded bg-body-secondary">Software</div>
+                    <div class="px-2 py-1 rounded bg-body-secondary">Social</div>
+                    <div class="px-2 py-1 rounded bg-body-secondary">Education</div>
+                    <div class="px-2 py-1 rounded bg-body-secondary">Music</div>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    <h4 class="">Project Suggestions</h4>
+    <div class="row g-2">
+        <div class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
+            <app-project-card></app-project-card>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
+            <app-project-card></app-project-card>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
+            <app-project-card></app-project-card>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
+            <app-project-card></app-project-card>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
+            <app-project-card></app-project-card>
+        </div>
+
+
+
+    </div>
+</div>
+
