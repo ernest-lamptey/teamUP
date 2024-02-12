@@ -5,18 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './projects/shared/header/header.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import { CarouselComponent } from './shared/carousel/carousel.component'
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchBarComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbCarouselModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
