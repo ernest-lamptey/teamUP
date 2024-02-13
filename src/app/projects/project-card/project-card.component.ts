@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-card.component.scss']
 })
 export class ProjectCardComponent {
-  imageUrl = 'https://picsum.photos/id/944/600/600';
+  randomId = Math.floor(Math.random() * 500)
+  imageUrl = `https://picsum.photos/id/${this.randomId}/600/300`;
+
+  @Input() project:any = {};
+
 }
