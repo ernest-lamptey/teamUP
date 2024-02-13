@@ -10,6 +10,7 @@ import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { CarouselComponent } from './shared/carousel/carousel.component'
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProjectCardComponent } from './projects/project-card/project-card.compo
     AppRoutingModule,
     NgbCarouselModule,
     NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
