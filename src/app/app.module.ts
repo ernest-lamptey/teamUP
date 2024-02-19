@@ -10,7 +10,8 @@ import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { CarouselComponent } from './shared/carousel/carousel.component'
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     SearchBarComponent,
     CarouselComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
