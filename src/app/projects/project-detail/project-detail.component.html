@@ -1,6 +1,57 @@
 <div>
-    <i class="fa-solid fa-chevron-left"></i>
+    <fa-icon routerLink="/" class="back-icon" [icon]="faChevronLeft"></fa-icon>
+    <fa-icon class="love-icon" [icon]="faHeart"></fa-icon>
     <img [src]="project && project.imageUrl" class="card-img-top" alt="...">
 </div>
-
+<div class="container">
+    <h1 class="card-title mt-2">{{ project && project.title }}</h1>
+    <span class="text-body-secondary">Last updated {{ project && project.date_created | date }}</span><br>
+    <span class="text-body-secondary">{{ project && project.contributors.length }} Contributors</span><br>
+    <span class="text-body-secondary">{{ project && project.open_positions.length || 'No' }} open positions</span>
+    <hr>
+    <div class="mb-3" ngbAccordion>
+        <div ngbAccordionItem [collapsed]="false">
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton>Description</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+              <ng-template>
+                {{ project && project.description }}
+              </ng-template>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="mb-3" ngbAccordion>
+        <div ngbAccordionItem>
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton>Skills</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+              <ng-template>
+                <div class="d-flex flex-row flex-wrap gap-2">
+                    <div *ngFor="let skill of project.skills" class="px-2 py-1 rounded bg-body-secondary">{{ skill }}</div>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="mb-3" ngbAccordion>
+        <div ngbAccordionItem>
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton>Open Positions</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+              <ng-template>
+                <div *ngFor="let position of project.open_positions" class="px-2 py-1">{{ position }}</div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
 
