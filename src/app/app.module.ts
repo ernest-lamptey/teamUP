@@ -12,6 +12,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
     AppRoutingModule,
     NgbCarouselModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
