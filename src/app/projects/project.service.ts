@@ -12,4 +12,8 @@ export class ProjectService {
   getProjects() {
     return this.http.get(this.rootUrl + '/projects')
   }
+
+  getOneProject(id:string) {
+    return this.http.get(this.rootUrl + `/projects/${id}`)
+  }
 }
