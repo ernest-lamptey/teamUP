@@ -31,7 +31,7 @@
     <h4 class="">Project Suggestions</h4>
     <div class="row g-2">
         <div *ngFor="let project of projects" class="col-sm-6 col-xl-3 mb-2 mb-sm-0">
-            <app-project-card [routerLink]="project.id" [project]="project"></app-project-card>
+            <app-project-card [routerLink]="project.id.toString()" [project]="project"></app-project-card>
         </div>
     </div>
 </div>

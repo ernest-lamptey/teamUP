@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Project } from '../project.model';
 
 @Component({
   selector: 'app-project-card',
@@ -7,6 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProjectCardComponent {
 
-  @Input() project:any = {};
+  @Input() project!: Project;
 
 }
