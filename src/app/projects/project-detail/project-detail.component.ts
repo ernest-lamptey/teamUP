@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { ActivatedRoute } from '@angular/router';
 import { faChevronLeft, faCoffee, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Project } from '../project.model';
 
 @Component({
   selector: 'app-project-detail',
@@ -11,7 +12,7 @@ import { faChevronLeft, faCoffee, faHeart } from '@fortawesome/free-solid-svg-ic
 export class ProjectDetailComponent implements OnInit {
   faChevronLeft = faChevronLeft
   faHeart = faHeart
-  project: any
+  project!: Project;
   constructor(private projectService: ProjectService,
     private activatedRoute: ActivatedRoute){}
 
