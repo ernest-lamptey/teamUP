@@ -48,6 +48,7 @@
             <div ngbAccordionBody>
               <ng-template>
                 <div *ngFor="let position of project.open_positions" class="px-2 py-1">{{ position }}</div>
+                <span *ngIf="project.open_positions.length < 1">No open positions</span>
               </ng-template>
             </div>
           </div>
