@@ -1,0 +1,27 @@
+<div class="banner">
+    <fa-icon routerLink="/" class="back-icon" [icon]="faChevronLeft"></fa-icon>
+    <fa-icon class="love-icon" [icon]="faEllipsis"></fa-icon>
+    <img src="https://picsum.photos/id/1011/600/250
+    " class="card-img-top" alt="...">
+    <img [src]="user && user.photo_url" class="profile_img rounded-circle" alt="">
+</div>
+<div class="container">
+    <h1 class="">{{ user && user.first_name }} {{ user && user.last_name}}</h1>
+    <span class="text-body-secondary d-block">{{ user && user.email }}</span>
+    <span class="text-body-secondary d-block">{{ profile && profile.institution }}</span>
+    <hr>
+    <h4>Summary</h4>
+    <p class="text-body-secondary mb-4" style="height: 50px; overflow: hidden;">{{ profile && profile.summary}}</p>
+    <h4>Skills</h4>
+    <div class="d-flex flex-row flex-wrap gap-2 mb-4">
+        <div *ngFor="let skill of profile && profile.skills" class="px-2 py-1 rounded bg-body-secondary">{{ skill }}</div>
+    </div>
+    <h4>Interests</h4>
+    <div class="d-flex flex-row flex-wrap gap-2 mb-4">
+        <div *ngFor="let skill of profile && profile.interests" class="px-2 py-1 rounded bg-body-secondary">{{ skill }}</div>
+    </div>
+    <h4>Current Projects</h4>
+    <div class="d-flex flex-row flex-wrap gap-2 mb-4">
+        <div *ngFor="let skill of profile && profile.projects" class="px-2 py-1 rounded bg-body-secondary">{{ skill }}</div>
+    </div>
+</div>

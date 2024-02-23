@@ -13,6 +13,7 @@ import { ProjectCardComponent } from './projects/project-card/project-card.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SearchBarComponent,
     CarouselComponent,
     ProjectCardComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
