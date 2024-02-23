@@ -1,0 +1,32 @@
+.back-icon {
+    position: absolute;
+    background-color: rgba(39, 39, 39, 0.8);
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    line-height: 2.4rem;
+    margin: 1rem 0 0 1rem;
+    color: white;
+    // border-radius: 50%;
+}
+
+.love-icon {
+    position: absolute;
+    right: 0;
+    background-color: rgba(39, 39, 39, 0.8);
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    line-height: 2.4rem;
+    margin: 1rem 1rem 0 0;
+    color: white;
+    // border-radius: 50%;
+}
+
+// Remove redundant css
+.profile_img {
+    width: 72px;
+    margin: -36px 0 0 1rem;
+}   

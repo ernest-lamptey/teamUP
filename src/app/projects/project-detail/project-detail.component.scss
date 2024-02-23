@@ -1,5 +1,5 @@
 .back-icon {
-    position: fixed;
+    position: absolute;
     background-color: rgba(39, 39, 39, 0.8);
     width: 2.4rem;
     height: 2.4rem;
@@ -12,7 +12,7 @@
 }
 
 .love-icon {
-    position: fixed;
+    position: absolute;
     right: 0;
     background-color: rgba(39, 39, 39, 0.8);
     width: 2.4rem;
