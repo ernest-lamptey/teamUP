@@ -9,6 +9,10 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  getUsers() {
+    return this.http.get(this.rootUrl + '/authUser')
+  }
+
   getUser(id:string) {
     return this.http.get(this.rootUrl + `/authUser/${id}`)
   }

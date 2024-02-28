@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProfileComponent } from './profile/profile.component';
     CarouselComponent,
     ProjectCardComponent,
     ProjectDetailComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

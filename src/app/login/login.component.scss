@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.loginForm {
+    padding: 1.4rem;
+    border: 1px solid #dee2e6;
+    border-radius: 1rem;
+}
+
+.loginForm .cta {
+    width: 100%;
+}
