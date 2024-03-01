@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     })
   }
 
-  login() {
-    this.userService.login('mcrowe1@constantcontact.com', "qU1?DOPA'2")
+  login(email:HTMLInputElement, password:HTMLInputElement) {
+    this.userService.login(email.value, password.value)
   }
 
   ngOnDestroy(): void {

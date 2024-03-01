@@ -6,10 +6,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path: '', component: ProjectsComponent},
+  {path: '', redirectTo: 'projects', pathMatch: 'full'},
+  {path: 'projects', component: ProjectsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: ':id', component: ProjectDetailComponent}
+  {path: 'projects/:id', component: ProjectDetailComponent}
 ];
 
 @NgModule({

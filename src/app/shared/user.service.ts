@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, Subscription } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   rootUrl = 'http://localhost:3000'
-  loginStatus = new Subject<boolean>();
+  loginStatus = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) { }
 
@@ -25,5 +25,10 @@ export class UserService {
       const result = user && (user.password === password)
       this.loginStatus.next(result);
     })
+  }
+
+  logout() {
+    this.loginStatus.next(false);
+    alert('Logout success')
   }
 }
