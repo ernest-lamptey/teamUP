@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, Subscription } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   rootUrl = 'http://localhost:3000'
-  loginStatus = new Subject<boolean>();
+  loginStatus = new BehaviorSubject<boolean>(false);
+  user = {}
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +25,12 @@ export class UserService {
       const user = users.filter((user) => user.email == email.trim())[0];
       const result = user && (user.password === password)
       this.loginStatus.next(result);
+      this.user = user;
     })
+  }
+
+  logout() {
+    this.loginStatus.next(false);
+    alert('Logout success')
   }
 }
