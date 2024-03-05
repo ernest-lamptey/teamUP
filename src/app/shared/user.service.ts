@@ -8,6 +8,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class UserService {
   rootUrl = 'http://localhost:3000'
   loginStatus = new BehaviorSubject<boolean>(false);
+  user = {}
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +25,7 @@ export class UserService {
       const user = users.filter((user) => user.email == email.trim())[0];
       const result = user && (user.password === password)
       this.loginStatus.next(result);
+      this.user = user;
     })
   }
 

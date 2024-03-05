@@ -18,14 +18,13 @@ export class ProfileComponent implements OnInit {
     private userService: UserService){}
 
   ngOnInit() {
-    this.profileService.getProfile("1").subscribe((res) => {
-      this.profile = res;
-      console.log(res)
-    })
+    this.user = this.userService.user
+    // console.log("logged in user:", this.user)
 
-    this.userService.getUser("1").subscribe((res) => {
-      this.user = res;
+    this.profileService.getProfile(this.user.id.toString()).subscribe((res) => {
+      this.profile = res;
       // console.log(res)
     })
+
   }
 }
