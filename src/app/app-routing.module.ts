@@ -4,12 +4,13 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'projects', pathMatch: 'full'},
   {path: 'projects', component: ProjectsComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'profile', component: ProfileComponent},
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'projects/:id', component: ProjectDetailComponent}
 ];
 
