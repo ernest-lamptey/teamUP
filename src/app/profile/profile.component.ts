@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from './profile.service';
-import { UserService } from '../shared/user.service';
+import { UserService } from '../services/user.service';
 import { faChevronLeft, faEllipsis, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

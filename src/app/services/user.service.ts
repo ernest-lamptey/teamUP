@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ export class UserService {
   loginStatus = new BehaviorSubject<boolean>(false);
   user = {}
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private authService: AuthService) { }
 
   getUsers() {
     return this.http.get<any[]>(this.rootUrl + '/authUser')
@@ -21,12 +23,14 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    this.getUsers().subscribe(users => {
-      const user = users.filter((user) => user.email == email.trim())[0];
-      const result = user && (user.password === password)
-      this.loginStatus.next(result);
-      this.user = user;
+    this.authService.signin(email, password).subscribe(user => {
+      this.loginStatus.next(!!user.idToken)
+      // this.user = user;
+    },
+    error => {
+      console.log(error)
     })
+
   }
 
   logout() {
