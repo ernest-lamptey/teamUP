@@ -21,9 +21,8 @@ export class ProfileComponent implements OnInit {
     this.user = this.userService.user
     // console.log("logged in user:", this.user)
 
-    this.profileService.getProfile(this.user.id.toString()).subscribe((res) => {
-      this.profile = res;
-      // console.log(res)
+    this.profileService.getProfile(this.user.email).then(res => {
+      console.log(res.data())
     })
 
   }

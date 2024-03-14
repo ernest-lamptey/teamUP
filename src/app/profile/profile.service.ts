@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 
 @Injectable({
@@ -8,9 +9,9 @@ import { Injectable } from '@angular/core';
 export class ProfileService {
   rootUrl = 'http://localhost:3000'
 
-  constructor(private http: HttpClient) { }
+  constructor(private dataService: DataService) { }
 
-  getProfile(id:string) {
-    return this.http.get(this.rootUrl + `/profiles/${id}`)
+  getProfile(email:string) {
+    return this.dataService.getProfile(email)
   }
 }

@@ -25,7 +25,7 @@ export class UserService {
   login(email: string, password: string) {
     this.authService.signin(email, password).subscribe(user => {
       this.loginStatus.next(!!user.idToken)
-      // this.user = user;
+      this.user = user;
     },
     error => {
       console.log(error)
