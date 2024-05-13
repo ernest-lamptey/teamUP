@@ -8,3 +8,4 @@ The primary goal of 'Team Up' is to bridge the gap between university students w
 teamUP is built using the following technologies
 - [Angular](https://angular.io/) - a framework for building scalable frontend single page applications
 - [Bootstrap](https://getbootstrap.com/) - a powerful and extensible frontend toolkit
+- [Json server](https://www.npmjs.com/package/json-server) - a tool for creating fake api routes based on json data
